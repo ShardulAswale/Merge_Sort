@@ -1,61 +1,21 @@
-# Merge Sort
+# Merge Sort in Go
 
-# About
-Using Go Programming Language implement merge sort.
-(Bonus:- simulation of progress bar.)
-# Theory
-Top-down Merge Sort Implementation:
-The top-down merge sort approach is the methodology which uses recursion mechanism. It starts at the Top and proceeds downwards, with each recursive turn asking the same question such as “What is required to be done to sort the array?” and having the answer as, “split the array into two, make a recursive call, and merge the results.”, until one gets to the bottom of the array-tree.
+Console demonstration of recursive merge sort with ascending and descending output.
 
-Example: Let us consider an example to understand the approach better.
+## How it works
 
-Divide the unsorted list into n sublists, each comprising 1 element (a list of 1 element is supposed sorted).
+`sort.go` generates twenty random integers, recursively splits the slice and merges the sorted halves. The menu selects ascending or descending order. Timed console messages simulate progress rather than reporting actual sorting progress.
 
-Working of Merge Sort
+## Usage
 
-Top-down Implementation
+Requires Go. From the repository root:
 
-Repeatedly merge sublists to produce newly sorted sublists until there is only 1 sublist remaining. This will be the sorted list.
+```sh
+go run sort.go
+```
 
-Merging of two lists done as follows:
-The first element of both lists is compared. If sorting in ascending order, the smaller element among two becomes a new element of the sorted list. This procedure is repeated until both the smaller sublists are empty and the newly combined sublist covers all the elements of both the sublists.
+Select `1` for ascending or `2` for descending order.
 
-# Components used:-
-  1. Slice:- Dyanamic array.
-  2. Rand:- used to generate random elements between a range and of a specific type. 
-  3. Sleep:-used to pause the execution of the program.
+## Notes
 
-# Imports used:-
-  1. fmt
-  2. Math/rand
-  3. time
-
-# How to Run
-Install Go in your system (Refer this)
-
-Set up system environment variable then follow the steps below
-
-$ cd ~Directory where file is saved
-
-$ go run sort.go
-## Or to run online
- - Go to https://repl.it/@ShardulAswale/merge-sort
-# Author
-
-Top-down Merge Sort Implementation:
-The top-down merge sort approach is the methodology which uses recursion mechanism. It starts at the Top and proceeds downwards, with each recursive turn asking the same question such as “What is required to be done to sort the array?” and having the answer as, “split the array into two, make a recursive call, and merge the results.”, until one gets to the bottom of the array-tree.
-
-Example: Let us consider an example to understand the approach better.
-
-Divide the unsorted list into n sublists, each comprising 1 element (a list of 1 element is supposed sorted).
-
-Working of Merge Sort
-
-Top-down Implementation
-
-Repeatedly merge sublists to produce newly sorted sublists until there is only 1 sublist remaining. This will be the sorted list.
-
-Merging of two lists done as follows:
-The first element of both lists is compared. If sorting in ascending order, the smaller element among two becomes a new element of the sorted list. This procedure is repeated until both the smaller sublists are empty and the newly combined sublist covers all the elements of both the sublists.
-
-Merging Two Lists
+The demonstration uses only Go's standard library. The recursive helpers assume a non-empty slice.
